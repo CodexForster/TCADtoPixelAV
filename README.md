@@ -24,6 +24,22 @@ Note 2: recipes_c-ansi needs to be compiled and built: change LIBDIR (line 21) i
 
 Once the interpolation is done, make sure to the relevant header file before running PixelAV.
 
+Example output for gen_efield:
+```
+user@user silvaco_datagen % ./gen_efield silvaco50x13 100
+Grid file = silvaco50x13/silvaco50x13_msh.grd, dessis plot file = silvaco50x13/silvaco50x13_100_des.dat
+number of vertices = 47652
+detector dimensions = 25.000000 6.250000 100.000000 um 
+field = 441.889000 433.236000 -16.666500 V/cm 
+enter the number of output grid points in each dim: nx[21], ny[21], nz[92]
+26 13 51
+(nx, ny, nz) = (26, 13, 51)
+total Lorentz Drift = 0.000000, average efield = nan 
+enter zmin (E = 0 for z>zmin) 
+100
+zmin = 100.000000 um
+```
+
 ## Validation plots
 There are two primary stages of data production: (1) massaged TCAD results and (2) PixelAV. 
 1. Massaged TCAD results correspond to the slice-creation, extraction, and merging of TCAD data. This final massaged TCAD data is compared with the DF-ISE TCAD data using [validateSilvacoData.py].
